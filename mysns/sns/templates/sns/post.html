@@ -3,7 +3,7 @@
 {% block title %}Post{% endblock %}
 
 {% block header %}
-<h1 class="display-4 text-primary">Post</h1>
+<h1 class="display-4 text-primary">Tw○et</h1>
 <p  class="caption">※Please chose a group to which you post.</p>
 {% if messages %}
 <ul class="list-group">
@@ -19,6 +19,6 @@
 <form action="{% url 'post' %}" method="post">
 {% csrf_token %}
 {{form.as_p}}
-<button class="btn btn-primary">Post!</button>
+<button class="btn btn-primary">Twee○</button>
 </form>
 {% endblock %}

@@ -9,7 +9,7 @@ function sendGroupForm(page) {
     document.group_form.submit();
 }
 </script>
-<h1 class="display-4 text-primary">SNS</h1>
+<h1 class="display-4 text-primary">Pakutter</h1>
 <p>※Please choose a group to which you interect with.</p>
 {% if messages %}
 <ul class="messages">
@@ -34,7 +34,7 @@ function sendGroupForm(page) {
     </form>
 </div>
 <table class="table mt-3">
-    <tr><th>Messages</th></tr>
+    <tr><th>Recent Twe○ts</th></tr>
 {% for item in contents %}
     <tr><td>
     <p class="my-0">
@@ -51,7 +51,7 @@ function sendGroupForm(page) {
     </span>
     <span class="float-right">
         "{{item.owner}}"(<a href="{% url 'add' %}?name={{item.owner}}">
-            add friend</a>)
+            follow</a>)
         <a href="{% url 'share' item.id %}">
             <button class="py-0">share</button></a>
         <a href="{% url 'good' item.id %}">
