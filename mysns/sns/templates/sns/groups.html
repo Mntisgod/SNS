@@ -4,10 +4,7 @@
 
 {% block header %}
 <h1 class="display-4 text-primary">Group</h1>
-<p class="caption">※グループを選択してselect memberすると、
-    そのグループに登録されている利用者がONになります。
-    利用者のチェックをONにしてset memberすると、ONにしてある
-    利用者がグループに追加されます。</p>
+<p class="caption">※You can chose friends into a group who can see your post.</p>
 {% if messages %}
 <ul class="messages">
     {% for message in messages %}
@@ -34,7 +31,7 @@
 <button class="btn btn-primary mt-0">set members</button>
 </form>
 <hr>
-<p>※新しいGroupの登録</p>
+<p>※Create New group</p>
 <form action="{% url 'creategroup' %}" method="post">
 {% csrf_token %}
 {{create_form}}
